@@ -1,0 +1,144 @@
+/*Nav Help*/
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Lovers Quarrel', cursive;*/
+
+header {
+  overflow: hidden;
+  padding-top: 40px;
+  background: black;
+}
+
+header a, header label {
+  display: block;
+  padding: 20px;
+  color: #222;
+  text-decoration: none;
+  line-height: 20px;
+
+}
+
+div {
+    font-size: 24px;
+
+}
+
+header a:hover, header label:hover { color: #aaa; }
+
+header label {
+  float: right;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+header label:after {
+  content: "\2261";
+  font-size: 1.8em;
+}
+
+
+.logo:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+  top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 
+    -1px 0 1px #c6bb9f, 
+    0 1px 1px #c6bb9f, 
+    5px 5px 10px rgba(0, 0, 0, 0.4),
+    -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  float: left;
+  font-family: 'Lovers Quarrel', cursive;
+  font-weight: bold;
+  font-size: 3.5em;
+     color: #D5AD6D; /*if no support for background-clip*/
+background: -webkit-linear-gradient(transparent, transparent),
+-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+background: -o-linear-gradient(transparent, transparent);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+}
+  
+nav {
+  float: right;
+  max-height: 0;
+  width: 100%;
+  -webkit-transition: max-height 0.3s; 
+     -moz-transition: max-height 0.3s;
+       -o-transition: max-height 0.3s;
+          transition: max-height 0.3s;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+   padding-bottom: 10px;
+}
+  
+nav li {
+  display: block;
+  text-align: center;
+}
+  
+nav a {
+  padding: 10px;
+  width: 100%;
+   color: #D5AD6D; /*if no support for background-clip*/
+background: -webkit-linear-gradient(transparent, transparent),
+-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+background: -o-linear-gradient(transparent, transparent);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#nav { display: none; }
+
+#nav:checked ~ nav {
+  max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+}
+
+@media only screen and (min-width: 700px) {
+  
+  header label { display: none; }
+  
+  nav {
+    width: auto;
+    max-height: none;
+  }
+  
+  nav ul {
+    padding: 0;
+    padding-right: 10px;
+
+  }
+  
+  nav li {
+    display: inline-block;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+
+  }
+
+  
+  header nav a {
+    display: inline-block;
+    padding: 20px 10px;
+    width: auto;
+  }
+  
+}
+
+/**** STATE ****/
+.is-current {
+ /* background-color: #ccc;
+  color: white;*/
+   text-decoration: underline;
+   text-decoration-color: white;
+
+}

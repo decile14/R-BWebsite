@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+    width: 90%;
+    max-width: 960px;
+    display: grid;
+    
+}
+
+.title {
+  text-align: center;
+}
+
+/*button and overview content for home page*/
+#lower_left {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #b01030;
+  float: left;
+  width: 75%;
+}
+
+#lower_left > p {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#lower_right {
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+}
+/*
+footer{
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+}*/
+
+footer > div {
+        font-size: 24px;
+        color: gray;
+        background-color: black;
+         font-family: 'Raleway', sans-serif;
+
+    }
+
+.sidebar {
+        grid-area: sidebar;
+
+    }
+
+.box {
+  background-color: #aaa;
+  /*opacity: 0.6;
+  filter: alpha(opacity= 50);*/
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.5);
+   color: black;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #b01030;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 25px;
+   padding: 30px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+section, p {
+ font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: bold;
+
+  /*font-size: 16px;*/
+  color: #b01030;
+  text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+}
+
+section {
+  padding-bottom: 50px;
+}
+
+h1 {
+
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 100px;
+    color: #D5AD6D; /*if no support for background-clip*/
+background: -webkit-linear-gradient(transparent, transparent),
+-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+background: -o-linear-gradient(transparent, transparent);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+}
+
+h2 {
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 55px;
+    color: #D5AD6D; /*if no support for background-clip*/
+background: -webkit-linear-gradient(transparent, transparent),
+-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+background: -o-linear-gradient(transparent, transparent);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.fullBackground {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gold-background{
+ background: #FDE08D;
+ height: 100%;
+ width: 100%;
+  	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+border:#8f6B29 2px solid;
+
+}
+
+.shiny-background {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+/*Artist List Page*/
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+   flex: 1; /* additionally, equal width */
+  
+  padding: 1em;
+/*  border-bottom: solid #f0a926  ;*/
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  display: flex; /* equal height of the children */
+
+}
+
+img {
+  border: 2px solid #f0a926;
+  border-radius: 50%;
+
+}
